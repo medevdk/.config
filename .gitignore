@@ -1,0 +1,28 @@
+# Ignore all
+*
+
+#But allow
+!.gitignore
+
+!waybar
+!waybar/config
+!waybar/style.css
+
+!wofi
+!wofi/config
+!wofi/style.css
+
+!foot
+!foot/foot.ini
+
+!sway
+!sway/config
+
+!neofetch
+!neofetch/config.conf
+
+!wallpapers
+!wallpapers/*
+
+!yt-dlp
+!yt-dlp/config
