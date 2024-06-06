@@ -115,7 +115,7 @@ output * bg $(find $wallpapers_path -type f | shuf -n 1) fill
 exec swaymsg "workspace 1;exec $term"
 exec swammsg "workspace 2;exec firefox"
 #notification demo (for popups)
-exec maco
+exec mako
 
 #---------------
 # Moving around:
@@ -214,9 +214,10 @@ for_window [title="About Mozilla Firefox"] floating enable
 for_window [window_role ="About"] floating enable
 
 for_window [app_id="mpv"] floating enable
+for_window [app_id="vlc"] floating enable
 for_window [app_id ="thunar"] floating enable
 for_window [app_id="eog"] floating enable
-
+for_window [app_id="qbittorrent"] floating enable
 
 
 #-----------------------------
