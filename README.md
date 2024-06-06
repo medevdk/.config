@@ -4,6 +4,10 @@
 ```
 sudo dnf install git tree stow vim neovim zsh tmux
 ```
+#### And ####
+```
+sudo dnf install bat lolcat cowsay fortune-mod neofetch yt-dlp speedtest-cli
+```
 
 #### Install Sway ####
 ```
@@ -14,6 +18,11 @@ sudo dnf install sway waybar wofi clipman brightnessctl mako
 ```
 sudo dnf copr enable maveonair/jetbrains-mono-nerd-fonts
 sudo dnf install jetbrains-mono-nerd-fonts
+```
+
+#### Install gui apps ####
+```
+sudo dnf install firefox zathura zathura-pdf-poppler mpv eog
 ```
 
 #### clone the repo ####
