@@ -1,6 +1,6 @@
 ## Linux (Fedora) Sway setup ##
 
-#### Install the required cli apps ####
+#### Install cli apps ####
 ```
 sudo dnf install git tree stow vim neovim zsh tmux
 ```
