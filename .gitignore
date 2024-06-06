@@ -30,3 +30,6 @@ nvim/lazy-lock.json
 
 !yt-dlp
 !yt-dlp/config
+
+!bat
+!bat/config
