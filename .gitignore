@@ -21,6 +21,10 @@
 !neofetch
 !neofetch/config.conf
 
+!nvim
+!nvim/**
+nvim/lazy-lock.json
+
 !wallpapers
 !wallpapers/*
 
