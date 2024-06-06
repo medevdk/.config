@@ -1,4 +1,4 @@
-## Linux (Fedora) Sway config setup ##
+## Linux (Fedora) Sway setup ##
 
 #### Install the required cli apps ####
 ```
