@@ -22,7 +22,7 @@ cd ~
 git clone git@github.com:medevdk/.config
 ```
 
-in terminal / tty enter `sway` (or select in sddm)
+in terminal / tty enter `sway` (or select in display manager)
 
 - CTRL-D will open wofi (launcher)
 - CTRL-ENTER will open foot (wayland terminal)
