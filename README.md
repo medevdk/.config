@@ -78,5 +78,5 @@ stow vim
 ```
 reload
 
-CTRL-A + SHIFT I
+CTRL-A + Shift I
 ```
