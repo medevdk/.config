@@ -15,6 +15,9 @@
 !foot
 !foot/foot.ini
 
+!wezterm
+!wezterm/wezterm.lua
+
 !sway
 !sway/config
 
