@@ -44,7 +44,7 @@ config.hide_tab_bar_if_only_one_tab = true
 config.adjust_window_size_when_changing_font_size = false
 
 
-config.window_background_opacity = 0.8
+config.window_background_opacity = 0.9
 
 config.inactive_pane_hsb = {
   saturation = 0.4,
