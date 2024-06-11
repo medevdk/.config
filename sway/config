@@ -21,7 +21,8 @@ input "type:keyboard" {
 }
 
 # Your preferred terminal emulator
-set $terminal foot
+# set $terminal foot
+set $terminal wezterm
 
 # i3-gaps
 gaps inner 2
@@ -113,8 +114,8 @@ output * bg $(find $wallpapers_path -type f | shuf -n 1) fill
 #---------------
 # Autostart:
 #---------------
-# exec swaymsg "workspace 1;exec $term"
-exec swaymsg "workspace 1;exec term -s"
+exec swaymsg "workspace 1;exec $term"
+# exec swaymsg "workspace 1;exec term -s"
 exec swammsg "workspace 2;exec firefox"
 #notification demo (for popups)
 exec mako
