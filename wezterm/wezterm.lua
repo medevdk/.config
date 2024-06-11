@@ -30,6 +30,7 @@ config.window_padding = {
 if is_darwin() then
   config.window_decorations = 'RESIZE'
   config.font_size = 14
+  -- config.native_macos_fullscreen_mode = true
 end
 
 if is_linux() then
@@ -70,6 +71,7 @@ config.keys = {
   { key = 'l', mods = 'LEADER|SHIFT', action = act({ AdjustPaneSize = { 'Right', 5 } }) },
   { key = 'c', mods = 'CTRL|SHIFT',   action = act({ CopyTo = "Clipboard" }) },
   { key = 'v', mods = 'CTRL|SHIFT',   action = act({ PasteFrom = "Clipboard" }) },
+  { key = 'f', mods = 'LEADER',       action = act.ToggleFullScreen },
 
 }
 
