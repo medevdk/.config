@@ -32,7 +32,8 @@ hide_edge_borders both
 
 # Your preferred application launcher
 set $menu wofi
-set $term foot
+# set $term foot
+set $term footclient
 
 ### Output configuration
 
@@ -112,7 +113,8 @@ output * bg $(find $wallpapers_path -type f | shuf -n 1) fill
 #---------------
 # Autostart:
 #---------------
-exec swaymsg "workspace 1;exec $term"
+# exec swaymsg "workspace 1;exec $term"
+exec swaymsg "workspace 1;exec term -s"
 exec swammsg "workspace 2;exec firefox"
 #notification demo (for popups)
 exec mako
