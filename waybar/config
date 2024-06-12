@@ -8,11 +8,11 @@
     "position": "top",
     "height": 40,
 
-    "modules-center": [
+    "modules-left": [
           "clock#date",
           "clock#time"
     ],
-    "modules-left": [
+    "modules-center": [
         "sway/workspaces"
     ],
     "modules-right": [
