@@ -3,11 +3,13 @@ local mux = wezterm.mux
 local act = wezterm.action
 local config = wezterm.config_builder()
 
+-- Start in full screen
 wezterm.on('gui-startup', function()
   local tab, pane, window = mux.spawn_window({})
   window:gui_window():maximize()
 end)
 
+-- Check for OS
 local is_linux = function()
   return wezterm.target_triple:find("linux") ~= nil
 end
@@ -21,22 +23,24 @@ config.default_prog = { '/bin/zsh', '-l' }
 config.color_scheme = "Hardcore"
 
 config.window_padding = {
-  left = 8,
-  right = 14,
-  top = 8,
-  bottom = 8,
+  left = 40,
+  right = 20,
+  top = 10,
+  bottom = 10,
 }
 
 if is_darwin() then
   config.window_decorations = 'RESIZE'
   config.font_size = 14
-  -- config.native_macos_fullscreen_mode = true
+  config.native_macos_fullscreen_mode = false
 end
 
 if is_linux() then
   config.window_decorations = 'TITLE|RESIZE'
   config.font_size = 11
 end
+
+config.window_close_confirmation = "NeverPrompt"
 
 config.font = wezterm.font("JetBrainsMono Nerd Font")
 
