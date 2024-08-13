@@ -36,3 +36,6 @@ nvim/lazy-lock.json
 
 !bat
 !bat/config
+!bat/themes
+!bat/themes/*
+
