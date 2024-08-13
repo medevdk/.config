@@ -4,7 +4,7 @@ return {
     -- "nvim-tree/nvim-web-devicons"
   },
   config = function()
-    vim.keymap.set("n", "<leader>e", ":NvimTreeFindFileToggle<CR>", {
+    vim.keymap.set("n", "<leader>ee", ":NvimTreeFindFileToggle<CR>", {
       noremap = true
     })
 

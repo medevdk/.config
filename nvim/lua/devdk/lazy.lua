@@ -11,4 +11,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("devdk.plugins")
+require("lazy").setup("devdk.plugins", {
+  --disable lazy change notification
+  change_detection = {
+    notify = false,
+  },
+})

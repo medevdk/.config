@@ -3,4 +3,4 @@
 require("devdk.core.options")
 require("devdk.core.keymaps")
 
-require("devdk.lazy")
+require("devdk.lazy") --plugin manager
