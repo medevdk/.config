@@ -76,6 +76,7 @@ config.keys = {
   { key = 'c', mods = 'CTRL|SHIFT',   action = act({ CopyTo = "Clipboard" }) },
   { key = 'v', mods = 'CTRL|SHIFT',   action = act({ PasteFrom = "Clipboard" }) },
   { key = 'f', mods = 'LEADER',       action = act.ToggleFullScreen },
+  { key = 'r', mods = 'CTRL',         action = act.RotatePanes 'Clockwise' }
 
 }
 
