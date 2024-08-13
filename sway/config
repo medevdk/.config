@@ -205,26 +205,26 @@ exec mako
 #-----------------------------------------
 # Automatic floating windows - not all should be tiled
 #-----------------------------------------
-for_window [window_role = "pop-up"] floating enable
-for_window [window_role = "bubble"] floating enable
-for_window [window_role = "dialog"] floating enable
-for_window [window_type = "dialog"] floating enable
-for_window [window_role = "task_dialog"] floating enable
-for_window [window_role = "menu"] floating enable
-for_window [app_id = "floating"] floating enable
-for_window [app_id ="floating_update"] floating enable, resize set width 1000px height 600px
-for_window [class="(?i)pinentry"] floating enable
-for_window [title="Adminstrator privileges required"] floating enable
+  for_window [window_role = "pop-up"] floating enable
+  for_window [window_role = "bubble"] floating enable
+  for_window [window_role = "dialog"] floating enable
+  for_window [window_type = "dialog"] floating enable
+  for_window [window_role = "task_dialog"] floating enable
+  for_window [window_role = "menu"] floating enable
+  for_window [app_id = "floating"] floating enable
+  for_window [app_id ="floating_update"] floating enable, resize set width 1000px height 600px
+  for_window [class="(?i)pinentry"] floating enable
+  for_window [title="Adminstrator privileges required"] floating enable
 
-for_window [title="About Mozilla Firefox"] floating enable
-for_window [window_role ="About"] floating enable
+  for_window [title="About Mozilla Firefox"] floating enable
+  for_window [window_role ="About"] floating enable
 
-for_window [app_id="mpv"] floating enable
-for_window [app_id="vlc"] floating enable
-for_window [app_id ="thunar"] floating enable
-for_window [app_id="eog"] floating enable
-for_window [app_id="imv"] floating enable
-for_window [app_id="qbittorrent"] floating enable
+  for_window [app_id="mpv"] floating enable
+  for_window [app_id="vlc"] floating enable
+  for_window [app_id ="thunar"] floating enable
+  for_window [app_id="eog"] floating enable
+  for_window [app_id="imv"] floating enable
+  for_window [app_id="qbittorrent"] floating enable
 
 
 #-----------------------------
@@ -257,9 +257,9 @@ exec wl-paste -t text --watch clipman store --no-persist
 #-------------------
 # Player control:
 #-------------------
-bindsym XF86AudioPrev exec playerctl previous
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPlay exec playerctl play-pause
+  bindsym XF86AudioPrev exec playerctl previous
+  bindsym XF86AudioNext exec playerctl next
+  bindsym XF86AudioPlay exec playerctl play-pause
 
 
 #-------------------
