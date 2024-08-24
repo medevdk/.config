@@ -16,6 +16,9 @@ keymap.set("v", "jk", "<esc>", { desc = "Exit visual mode with jk " })
 --Clear search high lights -> not needed, in options hlsearch is off
 keymap.set("n", "<leader>nh", ":noh<CR>", { desc = "Clear search highlights" })
 
+--Choose a theme
+keymap.set("n", "<leader>th", ":Themery<CR>", { desc = "Choose Theme" })
+
 --NvimTree toggle Folderview
 keymap.set("n", "<leader>m", ":NvimTreeFocus<CR>", opts)
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
