@@ -39,3 +39,7 @@ nvim/lazy-lock.json
 !bat/themes
 !bat/themes/*
 
+!yazi
+!yazi/yazi.toml
+!yazi/keymap.toml
+!yazi/theme.toml
