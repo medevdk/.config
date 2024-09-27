@@ -21,6 +21,7 @@ end
 config.default_prog = { '/bin/zsh', '-l' }
 
 config.color_scheme = "Hardcore"
+-- config.color_scheme = "Catppuccin Mocha"
 
 config.window_padding = {
   left = 40,
