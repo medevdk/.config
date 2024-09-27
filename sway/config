@@ -7,6 +7,7 @@
 #-------------
 
 # Logo key. Use Mod1 for Alt.
+# Mod4 = Command key
 set $mod Mod4
 
 # Home row direction keys, like vim
@@ -96,6 +97,7 @@ output * bg $(find $wallpapers_path -type f | shuf -n 1) fill
 
     # start launcher
     bindsym $mod+d exec $menu
+    # bindsym $mod+Space exec $menu
 
 
     # Drag floating windows by holding down $mod and left mouse button.
