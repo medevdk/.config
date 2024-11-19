@@ -34,6 +34,9 @@ nvim/lazy-lock.json
 !yt-dlp
 !yt-dlp/config
 
+!mpv
+!mpv.conf
+
 !bat
 !bat/config
 !bat/themes
