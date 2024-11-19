@@ -53,8 +53,8 @@ config.adjust_window_size_when_changing_font_size = false
 config.window_background_opacity = 0.95
 
 config.inactive_pane_hsb = {
-  saturation = 0.4,
-  brightness = 0.4
+  saturation = 0.7,
+  brightness = 0.5
 }
 
 config.leader = {
