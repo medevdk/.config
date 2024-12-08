@@ -29,7 +29,7 @@
 nvim/lazy-lock.json
 
 !wallpapers
-!wallpapers/*
+!wallpapers/**
 
 !yt-dlp
 !yt-dlp/config
