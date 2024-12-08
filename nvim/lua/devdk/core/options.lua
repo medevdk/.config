@@ -30,3 +30,13 @@ opt.hlsearch = false
 opt.clipboard:append("unnamedplus") --use system clipboard as default register
 
 opt.scrolloff = 8
+
+--Highlight on yank
+local highlight_group = vim.api.nvim_create_augroup("YankHighLight", { clear = true })
+vim.api.nvim_create_autocmd("textYankPost", {
+  callback = function()
+    vim.highlight.on_yank { higroup = "incSearch", timeout = 1000 }
+  end,
+  group = highlight_group,
+  pattern = "*",
+})
