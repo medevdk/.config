@@ -94,7 +94,8 @@ output * bg $(find $wallpapers_path -type f | shuf -n 1) fill
     # bindsym $mod+Return exec $terminal
 
     # Kill focused window
-    bindsym $mod+Shift+q kill
+    # bindsym $mod+Shift+q kill
+    bindsym $mod+q kill
 
     # start launcher
     bindsym $mod+d exec $menu
