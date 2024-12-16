@@ -3,7 +3,7 @@ return {
   --will give info for available keys
   --
   "nvim-telescope/telescope.nvim",
-  tag = "0.1.x",
+  branch = "0.1.x",
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-tree/nvim-web-devicons",
