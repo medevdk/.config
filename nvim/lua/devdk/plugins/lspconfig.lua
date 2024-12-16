@@ -12,7 +12,7 @@ return {
     lazy = false,
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "gopls" },
+        ensure_installed = { "lua_ls", "gopls", "goimports" },
       })
     end,
   },
@@ -21,14 +21,24 @@ return {
     -- lazy = false,
     event = { "BufReadPre", "BufNewFile" },
     dependencies = {
-      "hrsh7th/cmp-nvim-lsp",
+      { 'saghen/blink.cmp' },
+      -- "hrsh7th/cmp-nvim-lsp",
       { "antosha417/nvim-lsp-file-operations", config = true },
       { "folke/neodev.nvim",                   opt = {} },
 
     },
-    config = function()
-      local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+    config = function(_, opts)
+      local lspconfig = require('lpsconfig')
+      for server, config in pairs(opts.servers) do
+        config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
+        lspconfig[server].setup(config)
+      end
+    end,
+
+    config = function()
+      -- local capabilities = require("cmp_nvim_lsp").default_capabilities()
+      local capabilities = require('blink.cmp').get_lsp_capabilities()
       local lspconfig = require("lspconfig")
 
       lspconfig.lua_ls.setup({
