@@ -10,6 +10,8 @@ return {
     -- - sr)'  - [S]urround [R]eplace [)] [']
     require('mini.surround').setup()
 
+    require('mini.pairs').setup()
+
     -- require('mini.starter').setup()
   end
 }
