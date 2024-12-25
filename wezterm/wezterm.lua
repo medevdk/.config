@@ -1,7 +1,7 @@
 local wezterm = require 'wezterm'
-local mux = wezterm.mux
-local act = wezterm.action
-local config = wezterm.config_builder()
+local mux     = wezterm.mux
+local act     = wezterm.action
+local config  = wezterm.config_builder()
 
 -- Start in full screen
 wezterm.on('gui-startup', function()
@@ -9,7 +9,7 @@ wezterm.on('gui-startup', function()
   window:gui_window():maximize()
 end)
 
--- Check for OS
+-- -- Check for OS
 local is_linux = function()
   return wezterm.target_triple:find("linux") ~= nil
 end
@@ -20,16 +20,18 @@ end
 
 config.default_prog = { '/bin/zsh', '-l' }
 
-config.color_scheme = "Hardcore"
--- config.color_scheme = "Catppuccin Mocha"
+config.enable_wayland = true
 
+config.color_scheme = "Hardcore"
+-- -- config.color_scheme = "Catppuccin Mocha"
+--
 config.window_padding = {
   left = 40,
   right = 20,
   top = 10,
   bottom = 10,
 }
-
+--
 if is_darwin() then
   config.window_decorations = 'RESIZE'
   config.font_size = 14
@@ -42,27 +44,27 @@ if is_linux() then
 end
 
 config.window_close_confirmation = "NeverPrompt"
-
+--
 config.font = wezterm.font("JetBrainsMono Nerd Font")
-
+--
 config.hide_tab_bar_if_only_one_tab = true
-
+--
 config.adjust_window_size_when_changing_font_size = false
-
-
+--
+--
 config.window_background_opacity = 0.95
-
+--
 config.inactive_pane_hsb = {
   saturation = 0.7,
   brightness = 0.5
 }
-
+--
 config.leader = {
   key = 'a',
   mods = 'CTRL',
   timeout_milliseconds = 2000
 }
-
+--
 config.keys = {
   { key = '|', mods = 'LEADER|SHIFT', action = act.SplitHorizontal { domain = 'CurrentPaneDomain' } },
   { key = '_', mods = 'LEADER|SHIFT', action = act.SplitVertical { domain = 'CurrentPaneDomain' } },
@@ -80,5 +82,5 @@ config.keys = {
   { key = 'r', mods = 'CTRL',         action = act.RotatePanes 'Clockwise' }
 
 }
-
+--
 return config
