@@ -12,7 +12,7 @@ return {
     lazy = false,
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "gopls", "goimports" },
+        ensure_installed = { "lua_ls", "gopls" },
       })
     end,
   },
@@ -28,18 +28,21 @@ return {
 
     },
 
-    config = function(_, opts)
-      local lspconfig = require('lpsconfig')
-      for server, config in pairs(opts.servers) do
-        config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
-        lspconfig[server].setup(config)
-      end
-    end,
-
+    -- config = function(_, opts)
+    --   local lspconfig = require('lpsconfig')
+    --   for server, config in pairs(opts.servers) do
+    --     config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
+    --     lspconfig[server].setup(config)
+    --   end
+    -- end,
+    --
     config = function()
       -- local capabilities = require("cmp_nvim_lsp").default_capabilities()
+      -- local capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
       local capabilities = require('blink.cmp').get_lsp_capabilities()
+
       local lspconfig = require("lspconfig")
+      -- lspconfig[server].setup(config)
 
       lspconfig.lua_ls.setup({
         capabilities = capabilities,
@@ -60,13 +63,12 @@ return {
         cmd = { "gopls" },
         capabilities = capabilities,
         filetypes = { "go", "gomod" },
-        -- root_dir = util.root_pattern("go.mod", ".git"),
+        -- root_dir = util.root_pattern("go.mod", ".git"),j
         settings = {
           gopls = {
             gofumpt = true,
             experimentalPostfixCompletions = true,
             analyses = {
-              fieldalignment = true,
               nilness = true,
               unusedwrite = true,
               useany = true,
