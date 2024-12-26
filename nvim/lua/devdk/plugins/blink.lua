@@ -2,7 +2,7 @@ return {
   'saghen/blink.cmp',
   dependencies = {
     'rafamadriz/friendly-snippets',
-    'onsails/lspkind.nvim',
+    'onsails/lspkind.nvim', -- vs code like pictograms
   },
   version = 'v0.*',
 
