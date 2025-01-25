@@ -42,3 +42,6 @@ nvim/lazy-lock.json
 !bat/themes
 !bat/themes/*
 
+!wlogout
+!wlogout/layout
+!wlogout/style.css
