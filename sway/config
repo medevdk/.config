@@ -224,7 +224,7 @@ exec mako
   for_window [title="Library"] floating enable
   # for_window [window_role ="About"] floating enable
   # for_window [window_role ="Library"] floating enable
-
+for_window [app_id="^firefox$" title="^Extension: \(Bitwarden - Free Password Manager\) - Bitwarden — Mozilla Firefox$"] move scratchpad, resize set width 435 px height 600 px, scratchpad show
   for_window [app_id="mpv"] floating enable
   for_window [app_id="vlc"] floating enable
   for_window [app_id ="thunar"] floating enable

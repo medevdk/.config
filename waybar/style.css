@@ -1,13 +1,10 @@
 * {
   font-size: 14px;
-  /* font-family: "Terminus (TTF)"; */
   font-family:"JetBrains Mono Nerd";
 }
 
 window#waybar {
-    /* background: rgba(1,0,0,0); */ 
-/*  background:#36454f; */
-  background: #121313;
+    background: #121313;
     color: #ffffff; 
     transition-property: background-color;
     transition-duration: .5s;
@@ -209,5 +206,9 @@ label:focus {
 
 #custom-power{
   margin:3px 10px 3px 3px;
+/*  color:#eb9605; */
+}
+
+#custom-power:hover {
   color:#eb9605;
 }
