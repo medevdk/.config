@@ -4,12 +4,14 @@ return {
     'rafamadriz/friendly-snippets',
     'onsails/lspkind.nvim', -- vs code like pictograms
   },
-  version = 'v0.*',
+  version = '*',
 
+  --@module 'blink.cmp'
+  --@type blink.cmp.Config
   opts = {
     keymap = {
-      -- CTRL-Y accept
-      -- CTRL-P / N Previous / Next
+      -- CTRL-Y -> accept
+      -- CTRL-P / N -> Previous / Next
       preset = 'default',
 
       --Tab / Shift TAB
@@ -63,7 +65,7 @@ return {
     },
 
     sources = {
-      default = { 'lsp', 'path', 'snippets', 'buffer' },
+      default = { 'lsp', 'path', 'snippets', 'buffer', 'markdown' },
 
       --Disable sources for command-line mode
       cmdline = {},
@@ -85,6 +87,11 @@ return {
         buffer = {
           min_keyword_length = 5,
           max_items = 5,
+        },
+        markdown = {
+          name = 'RenderMarkdown',
+          module = 'render-markdown.integ.blink',
+          fallbacks = { 'lsp' }
         },
       },
     },

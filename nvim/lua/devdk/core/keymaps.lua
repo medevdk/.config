@@ -33,3 +33,6 @@ keymap.set("n", "<C-l>", "<C-w>l", opts) --Navigate Right
 keymap.set("n", "<leader>sv", ":vsplit<CR>", opts)          --Split Vertical
 keymap.set("n", "<leader>sh", ":split<CR>", opts)           --Split Horizontal
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>", opts) --Toggle Minimize
+
+--Toggle spell checker
+keymap.set("n", "<leader>sp", ":set spell!<cr>", { desc = "Toggle spell checker" })

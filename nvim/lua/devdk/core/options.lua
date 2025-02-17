@@ -31,6 +31,10 @@ opt.clipboard:append("unnamedplus") --use system clipboard as default register
 
 opt.scrolloff = 8
 
+--Spelling
+opt.spell = true
+opt.spelllang = 'en_us'
+
 --Highlight on yank
 local highlight_group = vim.api.nvim_create_augroup("YankHighLight", { clear = true })
 vim.api.nvim_create_autocmd("textYankPost", {
