@@ -129,6 +129,7 @@
 
     "sway/workspaces": {
         "all-outputs": true,
+        "format": "{icon}",
         "disable-scroll": true,
 //        "format": "{icon} {name}",
 //        "format-icons": {
