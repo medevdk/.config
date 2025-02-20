@@ -5,7 +5,7 @@ opt.termguicolors = true
 opt.backspace = "indent,eol,start"
 
 --Line number
-opt.number = true         --show absolute number
+opt.number = true --show absolute number
 opt.relativenumber = true --add numbers to each line on the left side
 
 --Tab / Indent
@@ -33,14 +33,14 @@ opt.scrolloff = 8
 
 --Spelling
 opt.spell = true
-opt.spelllang = 'en_us'
+opt.spelllang = "en_us"
 
 --Highlight on yank
 local highlight_group = vim.api.nvim_create_augroup("YankHighLight", { clear = true })
 vim.api.nvim_create_autocmd("textYankPost", {
-  callback = function()
-    vim.highlight.on_yank { higroup = "incSearch", timeout = 1000 }
-  end,
-  group = highlight_group,
-  pattern = "*",
+	callback = function()
+		vim.highlight.on_yank({ higroup = "incSearch", timeout = 1000 })
+	end,
+	group = highlight_group,
+	pattern = "*",
 })
