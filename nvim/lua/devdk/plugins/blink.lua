@@ -67,6 +67,7 @@ return {
 
 		cmdline = {
 			--Disable sources for command-line mode
+			enabled = false,
 		},
 
 		sources = {
