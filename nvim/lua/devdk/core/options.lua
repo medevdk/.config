@@ -29,6 +29,7 @@ opt.hlsearch = false
 --Clipboard
 opt.clipboard:append("unnamedplus") --use system clipboard as default register
 
+-- Minimum number of lines to keep above and below the cursor
 opt.scrolloff = 8
 
 --Spelling
