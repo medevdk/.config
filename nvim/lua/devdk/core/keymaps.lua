@@ -30,9 +30,12 @@ keymap.set("n", "<C-k>", "<C-w>k", opts) --Navigate Up
 keymap.set("n", "<C-l>", "<C-w>l", opts) --Navigate Right
 
 --Window Management
-keymap.set("n", "<leader>sv", ":vsplit<CR>", opts)          --Split Vertical
-keymap.set("n", "<leader>sh", ":split<CR>", opts)           --Split Horizontal
+keymap.set("n", "<leader>sv", ":vsplit<CR>", opts) --Split Vertical
+keymap.set("n", "<leader>sh", ":split<CR>", opts) --Split Horizontal
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>", opts) --Toggle Minimize
 
 --Toggle spell checker
 keymap.set("n", "<leader>sp", ":set spell!<cr>", { desc = "Toggle spell checker" })
+
+--Oil - open parent directory of current file
+keymap.set("n", "-", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
