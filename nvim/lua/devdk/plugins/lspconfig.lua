@@ -25,7 +25,7 @@ return {
 			-- "hrsh7th/cmp-nvim-lsp",
 			{ "antosha417/nvim-lsp-file-operations", config = true },
 			{ "folke/neodev.nvim", opt = {} },
-			{ "jhui-fidget.nvim", opts = {} },
+			{ "j-hui/fidget.nvim", opts = {} },
 		},
 
 		config = function()
