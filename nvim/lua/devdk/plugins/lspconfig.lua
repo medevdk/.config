@@ -49,6 +49,42 @@ return {
 				},
 			})
 
+			lspconfig.html.setup({
+				capabilities = capabilities,
+				cmd = { "vscode-html-language-server", "--stdio" },
+				filetypes = { "html" },
+				init_options = {
+					configurationSection = { "html", "css", "javascript" },
+					embeddedLanguages = {
+						css = true,
+						javascript = true,
+					},
+					provideFormatter = true,
+				},
+				settings = {},
+				single_file_support = true,
+			})
+
+			lspconfig.cssls.setup({
+				capabilities = capabilities,
+				-- cmd = { "vscode-css-language-server", "--stdio" },
+				-- filetypes = { "css", "scss", "less" },
+				-- root_dir = function(fname)
+				-- 	return root_pattern(fname) or vim.loop.os_homedir()
+				-- end,
+				-- settings = {
+				-- 	css = {
+				-- 		validate = true,
+				-- 	},
+				-- 	less = {
+				-- 		validate = true,
+				-- 	},
+				-- 	scss = {
+				-- 		validate = true,
+				-- 	},
+				-- },
+			})
+
 			lspconfig.clangd.setup({
 				capabilities = capabilities,
 				cmd = {
