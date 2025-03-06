@@ -12,13 +12,12 @@ return {
 		lazy = false,
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "gopls" },
+				ensure_installed = { "lua_ls", "gopls", "marksman" },
 			})
 		end,
 	},
 	{
 		"neovim/nvim-lspconfig",
-		-- lazy = false,
 		event = { "BufReadPre", "BufNewFile" },
 		dependencies = {
 			{ "saghen/blink.cmp" },
@@ -67,23 +66,30 @@ return {
 
 			lspconfig.cssls.setup({
 				capabilities = capabilities,
-				-- cmd = { "vscode-css-language-server", "--stdio" },
-				-- filetypes = { "css", "scss", "less" },
+				cmd = { "vscode-css-language-server", "--stdio" },
+				filetypes = { "css", "scss", "less" },
 				-- root_dir = function(fname)
 				-- 	return root_pattern(fname) or vim.loop.os_homedir()
 				-- end,
-				-- settings = {
-				-- 	css = {
-				-- 		validate = true,
-				-- 	},
-				-- 	less = {
-				-- 		validate = true,
-				-- 	},
-				-- 	scss = {
-				-- 		validate = true,
-				-- 	},
-				-- },
+				settings = {
+					css = {
+						validate = true,
+					},
+					less = {
+						validate = true,
+					},
+					scss = {
+						validate = true,
+					},
+				},
 			})
+
+			lspconfig.jsonls.setup({
+				capabilities = capabilities,
+				cmd = { "vscode-json-language-server", "--stdio" },
+			})
+
+			lspconfig.marksman.setup({})
 
 			lspconfig.clangd.setup({
 				capabilities = capabilities,
