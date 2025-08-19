@@ -57,11 +57,15 @@
     },
 
     "bluetooth": {
-      "format-alt":"bluetooth: {status}",
+      //"format-alt":"bluetooth: {status}",
       "format-on":"",
-      "format-off":"!",
-      "on-click":"foot bluetoothctl",
-      "tooltip-format":"{status}"
+      "format-off":"󰂲",
+      "format-disabled": "",
+      "format-connected":"󰂱 {num_connections}",
+      "tooltip-format-connected": "{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+      //"on-click":"foot bluetoothctl",
+      //"tooltip-format":"{status}"
     },
 
     "clock#time": {

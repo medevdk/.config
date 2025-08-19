@@ -231,7 +231,7 @@ for_window [app_id="^firefox$" title="^Extension: \(Bitwarden - Free Password Ma
   for_window [app_id="eog"] floating enable
   for_window [app_id="imv"] floating enable
   for_window [app_id="qbittorrent"] floating enable
-
+  for_window [app_id="mcomixstarter.py"] floating enable
 
 #-----------------------------
 # a "clipboard manager"
