@@ -1,4 +1,4 @@
-  return {
+return {
   "nomnivore/ollama.nvim",
   dependencies = {
     "nvim-lua/plenary.nvim",
@@ -27,8 +27,13 @@
 
   ---@type Ollama.Config
   opts = {
-      -- model = "llama3.2:latest",
-      model = "mistral:latest",
+    -- model = "llama3.2:latest",
+    model = "mistral:latest",
     -- your configuration overrides
+    --
+    -- serve ollama when start this plugin
+    serve = {
+      on_start = true,
+    },
   }
 }
