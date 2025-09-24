@@ -123,6 +123,9 @@ exec swaymsg "workspace 1;exec $term -e tmux new"
 exec swaymsg "workspace 2;exec firefox"
 #notification demo (for popups)
 exec mako
+# start network manager applet
+exec nm-applet --indicator
+
 
 #---------------
 # Moving around:
