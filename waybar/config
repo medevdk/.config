@@ -18,6 +18,7 @@
     "modules-right": [
         "pulseaudio",
         "network",
+        "tray",
         "bluetooth",
         "battery",
         "custom/power"
